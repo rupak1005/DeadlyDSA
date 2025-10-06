@@ -1,4 +1,4 @@
-### Best Time to Buy and Sell Stocks
+### 1.Best Time to Buy and Sell Stocks
 
 #### Description
 Given an array `prices` where `prices[i]` is the price of a stock on day `i`, find the maximum profit you can achieve by buying and selling once. You must buy before you sell.
@@ -45,7 +45,7 @@ int maxProfit(vector<int>& prices) {
 }
 ```
 
-### Permutations in a String
+### 2.Permutations in a String
 
 #### Description
 Given two strings `s1` and `s2`, return `true` if `s2` contains a permutation of `s1`, otherwise return `false`.
@@ -100,7 +100,7 @@ bool checkInclusion(string s1, string s2) {
 }
 ```
 
-### Longest Substring Character Replacement
+### 3. Longest Substring Character Replacement
 
 #### Description
 Given a string `s` and an integer `k`, return the length of the longest substring containing the same letter after performing at most `k` character replacements.
@@ -152,7 +152,7 @@ int characterReplacement(string s, int k) {
 }
 ```
 
-### Longest Substring Without Repeating Characters
+### 4.Longest Substring Without Repeating Characters
 
 #### Description
 Given a string `s`, find the length of the longest substring without repeating characters.
@@ -205,7 +205,7 @@ int lengthOfLongestSubstring(string s) {
     return maxLen;
 }
 ```
-### Sliding Window Maximum
+### 5.Sliding Window Maximum
 
 #### Description
 Given an integer array `nums` and an integer `k`, find the maximum value in each sliding window of size `k`.
@@ -254,7 +254,7 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
     return res;
 }
 ```
-### Minimum Window Substring
+### 6.Minimum Window Substring
 
 #### Description
 Given two strings `s` and `t`, return the minimum window in `s` which contains all the characters of `t`. If no such window exists, return an empty string.

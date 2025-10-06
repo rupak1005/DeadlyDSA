@@ -1,4 +1,4 @@
-### Two Sum
+### 1.Two Sum
 
 #### Description
 Find indices of two numbers in `nums` that add up to `target`. Each input has one unique solution.
@@ -42,7 +42,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 }
 ```
 
-### Contains Duplicate
+### 2.Contains Duplicate
 
 #### Description
 Given an integer array `nums`, return `true` if any value appears at least twice in the array, and `false` if every element is distinct.
@@ -89,7 +89,7 @@ bool containsDuplicate(vector<int>& nums) {
 ```
 
 
-### Contains Duplicate II
+### 3.Contains Duplicate II
 
 #### Description
 Given an integer array `nums` and an integer `k`, return `true` if there are two distinct indices `i` and `j` such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
@@ -137,7 +137,7 @@ bool containsNearbyDuplicate(vector<int>& nums, int k) {
     return false;
 }
 ```
-### Valid Anagram
+### 4.Valid Anagram
 
 #### Description
 Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
@@ -181,7 +181,7 @@ bool isAnagram(string s, string t) {
     return true;
 }
 ```
-### Group Anagrams
+### 5.Group Anagrams
 
 #### Description
 Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
@@ -214,7 +214,7 @@ vector<vector<string>> groupAnagrams(vector<string>& strs) {
     return result;
 }
 ```
-### Product of Array Except Self
+### 6.Product of Array Except Self
 
 #### Description
 Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all elements of `nums` except `nums[i]`. Do not use division and solve in O(n) time.
@@ -265,7 +265,7 @@ vector<int> productExceptSelf(vector<int>& nums) {
     return res;
 }
 ```
-### Top K Elements
+### 7.Top K Elements
 
 #### Description
 Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in any order.
@@ -318,7 +318,7 @@ vector<int> topKFrequent(vector<int>& nums, int k) {
     return res;
 }
 ```
-### Roman to Integer
+### 8.Roman to Integer
 
 #### Description
 Convert a Roman numeral string `s` to an integer.
@@ -356,7 +356,7 @@ int romanToInt(string s) {
 - Same as brute force since the approach is already O(n).
 - **TC:** O(n) | **SC:** O(1)
 
-### Verify Alien Dictionary
+### 9.Verify Alien Dictionary
 
 #### Description
 Given a list of words and a string `order` representing the alphabet order of an alien language, return `true` if the words are sorted lexicographically according to this order.
@@ -398,7 +398,7 @@ bool isAlienSorted(vector<string>& words, string order) {
 - Same as brute force; comparing adjacent words is already efficient.
 - **TC:** O(n * m) | **SC:** O(1)
 
-### Longest Consecutive Sequence
+### 10.Longest Consecutive Sequence
 
 #### Description
 Given an unsorted integer array `nums`, return the length of the longest consecutive elements sequence.
@@ -457,7 +457,7 @@ int longestConsecutive(vector<int>& nums) {
 }
 ```
 
-### First Missing Positive
+### 11.First Missing Positive
 
 #### Description
 Given an unsorted integer array `nums`, return the smallest missing positive integer.
