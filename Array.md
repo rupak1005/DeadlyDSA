@@ -491,6 +491,18 @@ int firstMissingPositive(vector<int>& nums) {
     }
 }
 ```
+or 
+
+```cpp
+ int firstMissingPositive(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int missing=1;
+        for(auto i:nums){
+            if(missing==i)missing++;
+        }
+        return missing;
+    }
+```
 
 #### Optimized Approach (Index Placement)
 - Place each number `x` at `nums[x-1]` if in range.
