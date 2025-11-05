@@ -624,7 +624,7 @@ int largestRectangleArea(vector<int>& heights) {
 }
 ```
 
-##12. Implement Stack using Queues (LeetCode)
+### 12. Implement Stack using Queues (LeetCode)
 
 ### Short Description
 
