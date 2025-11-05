@@ -624,3 +624,60 @@ int largestRectangleArea(vector<int>& heights) {
 }
 ```
 
+##12. Implement Stack using Queues (LeetCode)
+
+### Short Description
+
+You need to implement a **stack** (LIFO) using only **queues** (FIFO). Perform push(), pop(), top(), empty() operations like a real stack.
+
+### Input Format
+
+sequence of operations
+`["MyStack","push","push","top","pop","empty"]`
+`[[],[1],[2],[],[],[]]`
+
+### Output Format
+
+returns output of operations
+`[null,null,null,2,2,false]`
+
+### Hint
+
+* Use **two queues**
+* Whenever pushing, enqueue to second queue and then move all elements of first → second
+* Swap queues
+* So the front of q1 always represents top of stack
+
+### Code Snippet (C++)
+
+```cpp
+class MyStack {
+public:
+    queue<int> q1, q2;
+
+    MyStack() { }
+    
+    void push(int x) {
+        q2.push(x);
+        while(!q1.empty()){
+            q2.push(q1.front());
+            q1.pop();
+        }
+        swap(q1, q2);
+    }
+    
+    int pop() {
+        int v = q1.front();
+        q1.pop();
+        return v;
+    }
+    
+    int top() {
+        return q1.front();
+    }
+    
+    bool empty() {
+        return q1.empty();
+    }
+};
+```
