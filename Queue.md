@@ -444,3 +444,71 @@ string predictPartyVictory(string senate) {
 }
 ```
 
+### 8.Implement Queue using Stacks (LeetCode)
+
+### Short Description
+
+Implement a **queue** (FIFO) using **two stacks** (LIFO) supporting push, pop, peek, and empty operations.
+
+### Input Format
+
+Example sequence:
+`["MyQueue","push","push","peek","pop","empty"]`
+`[[],[1],[2],[],[],[]]`
+
+### Output Format
+
+`[null,null,null,1,1,false]`
+
+### Hint
+
+* FIFO can be simulated by transferring elements between two stacks.
+* One stack handles input, the other only when removing/peeking.
+
+### Short Visual Diagram
+
+```
+push(1) -> s1=[1]
+push(2) -> s1=[1,2]
+
+pop(): move s1 -> s2 => s2=[2,1], pop => 1
+```
+
+### Code Snippet (C++)
+
+```cpp
+class MyQueue {
+public:
+    stack<int> s1,s2;
+
+    MyQueue(){}
+
+    void push(int x) {
+        s1.push(x);
+    }
+
+    int pop() {
+        if(s2.empty()){
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        int v=s2.top(); s2.pop(); return v;
+    }
+
+    int peek() {
+        if(s2.empty()){
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        return s2.top();
+    }
+
+    bool empty() {
+        return s1.empty() && s2.empty();
+    }
+};
+```
